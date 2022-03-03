@@ -1,5 +1,7 @@
 package de.aquafun3d.vanilla
 
+import de.aquafun3d.vanilla.listeners.JoinQuitListener
+import de.aquafun3d.vanilla.listeners.SleepListener
 import org.bukkit.Bukkit
 import org.bukkit.plugin.PluginManager
 import org.bukkit.plugin.java.JavaPlugin
@@ -21,7 +23,8 @@ class Main : JavaPlugin() {
 	}
 
 	private fun listenerRegistration() {
-
+		pluginManager.registerEvents(JoinQuitListener(),this)
+		pluginManager.registerEvents(SleepListener(),this)
 	}
 
 	companion object {

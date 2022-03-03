@@ -11,6 +11,3 @@ TODO:
 - Teambackback?
 - Heal?
 - Sleep messages
-- Chatmessages admin
-- Join/Quit messages
-- 
