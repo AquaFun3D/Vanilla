@@ -78,6 +78,6 @@ class GamemodeCommand: CommandExecutor {
 				player.sendMessage(Utils.PREFIX + ChatColor.RED + "You don't have permissions to use that command")
 			}
 		}
-		return false;
+		return false
 	}
 }

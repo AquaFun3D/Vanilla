@@ -1,12 +1,10 @@
 package de.aquafun3d.vanilla
 
+import de.aquafun3d.vanilla.commands.BackpackCommand
 import de.aquafun3d.vanilla.commands.DeathpointCommand
 import de.aquafun3d.vanilla.commands.GamemodeCommand
 import de.aquafun3d.vanilla.commands.WaypointCommand
-import de.aquafun3d.vanilla.listeners.DeathListener
-import de.aquafun3d.vanilla.listeners.JoinQuitListener
-import de.aquafun3d.vanilla.listeners.RespawnListener
-import de.aquafun3d.vanilla.listeners.SleepListener
+import de.aquafun3d.vanilla.listeners.*
 import de.aquafun3d.vanilla.utils.VanillaConfig
 import org.bukkit.Bukkit
 import org.bukkit.plugin.PluginManager
@@ -30,6 +28,7 @@ class Main : JavaPlugin() {
 		getCommand("gm")!!.setExecutor(GamemodeCommand())
 		getCommand("waypoint")!!.setExecutor(WaypointCommand())
 		getCommand("deathpoint")!!.setExecutor(DeathpointCommand())
+		getCommand("backpack")!!.setExecutor(BackpackCommand())
 	}
 
 	private fun listenerRegistration() {
@@ -37,6 +36,7 @@ class Main : JavaPlugin() {
 		pluginManager.registerEvents(SleepListener(),this)
 		pluginManager.registerEvents(DeathListener(),this)
 		pluginManager.registerEvents(RespawnListener(),this)
+		pluginManager.registerEvents(BackpackListener(),this)
 	}
 
 	companion object {

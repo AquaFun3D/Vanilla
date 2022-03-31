@@ -14,3 +14,6 @@ commands:
   deathpoint:
     description: Shows your latest deathpoint
     aliases: [dp]
+  backpack:
+    description: Opens your private backback
+    aliases: [bp]

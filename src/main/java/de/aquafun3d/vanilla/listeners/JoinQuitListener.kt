@@ -1,6 +1,7 @@
 package de.aquafun3d.vanilla.listeners
 
 import de.aquafun3d.vanilla.utils.Utils
+import net.kyori.adventure.text.Component
 import org.bukkit.ChatColor
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -14,12 +15,12 @@ class JoinQuitListener: Listener {
 	@EventHandler
 	fun onJoin(e: PlayerJoinEvent){
 		val player: Player = e.player
-		e.joinMessage = Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has joined"
+		e.joinMessage(Component.text(Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has joined"))
 	}
 
 	@EventHandler
 	fun onLeave(e: PlayerQuitEvent) {
 		val player = e.player
-		e.quitMessage =	Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has left"
+		e.quitMessage(Component.text(Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has left"))
 	}
 }
