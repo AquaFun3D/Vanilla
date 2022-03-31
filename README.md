@@ -6,8 +6,5 @@ TODO:
 
 - Backpack
 - Deathpoint
-- Gamemode shortener
 - Waypoints
-- Teambackback?
-- Heal?
 - Sleep messages

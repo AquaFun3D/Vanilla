@@ -8,3 +8,6 @@ description: Vanilla Plugin for Minecraft in Kotlin to add some nice features
 commands:
   gm:
     description: Gamemode command shortener
+  waypoint:
+    description: Set or show a waypoint
+    aliases: [wp]
