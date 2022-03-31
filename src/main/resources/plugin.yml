@@ -4,3 +4,7 @@ main: de.aquafun3d.vanilla.Main
 api-version: 1.18
 authors: [ AquaFun3D ]
 description: Vanilla Plugin for Minecraft in Kotlin to add some nice features
+
+commands:
+  gm:
+    description: Gamemode command shortener

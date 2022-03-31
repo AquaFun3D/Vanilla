@@ -1,5 +1,6 @@
 package de.aquafun3d.vanilla
 
+import de.aquafun3d.vanilla.commands.GamemodeCommand
 import de.aquafun3d.vanilla.listeners.JoinQuitListener
 import de.aquafun3d.vanilla.listeners.SleepListener
 import org.bukkit.Bukkit
@@ -19,7 +20,7 @@ class Main : JavaPlugin() {
 	}
 
 	private fun commandRegistration() {
-
+		getCommand("gm")!!.setExecutor(GamemodeCommand())
 	}
 
 	private fun listenerRegistration() {
