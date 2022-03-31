@@ -11,3 +11,6 @@ commands:
   waypoint:
     description: Set or show a waypoint
     aliases: [wp]
+  deathpoint:
+    description: Shows your latest deathpoint
+    aliases: [dp]
