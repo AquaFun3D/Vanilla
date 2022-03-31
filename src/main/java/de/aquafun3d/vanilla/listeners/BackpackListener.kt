@@ -19,7 +19,7 @@ class BackpackListener: Listener {
 		val title = e.view.title()
 		val inv = e.inventory
 		val player = e.player as Player
-		if (title == Component.text("" + ChatColor.DARK_PURPLE + "Backpack")) {
+		if (title == Component.text(ChatColor.DARK_PURPLE.toString() + "Backpack")) {
 			Main.vanillaConfig?.set("backpack." + player.uniqueId.toString(), null)
 			for (i in 0..26) {
 				val item = inv.getItem(i) ?: continue

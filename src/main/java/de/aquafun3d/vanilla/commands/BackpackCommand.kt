@@ -17,7 +17,7 @@ class BackpackCommand: CommandExecutor {
 	override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
 		if (sender is Player){
 			val player: Player = sender
-			val inv: Inventory = Bukkit.createInventory(null,27,Component.text("" + ChatColor.DARK_PURPLE + "Backpack"))
+			val inv: Inventory = Bukkit.createInventory(null,27, Component.text(ChatColor.DARK_PURPLE.toString() + "Backpack"))
 			if (Main.vanillaConfig?.contains("backpack." + player.uniqueId.toString()) == true) {
 				for (i in 0..26) {
 					var item: ItemStack
