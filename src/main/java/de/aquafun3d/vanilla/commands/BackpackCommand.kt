@@ -1,9 +1,7 @@
 package de.aquafun3d.vanilla.commands
 
 import de.aquafun3d.vanilla.Main
-import de.aquafun3d.vanilla.utils.Utils
 import net.kyori.adventure.text.Component
-import net.kyori.adventure.text.TextComponent
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.Material
