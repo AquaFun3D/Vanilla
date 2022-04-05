@@ -15,8 +15,7 @@ class SleepListener: Listener {
 	fun onPlayerSleep(e: PlayerBedEnterEvent) {
 		val player = e.player
 		if (e.bedEnterResult == PlayerBedEnterEvent.BedEnterResult.OK) {
-			val message: String = Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.GOLD.toString() + " is now sleeping..."
-			Bukkit.getOnlinePlayers().forEach { p: Player -> p.sendMessage(message) }
+			Utils.atAll(ChatColor.AQUA.toString() + player.name + ChatColor.GOLD.toString() + " is now sleeping...")
 		}
 	}
 }

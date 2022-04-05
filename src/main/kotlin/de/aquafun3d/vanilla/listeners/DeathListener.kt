@@ -16,6 +16,5 @@ class DeathListener: Listener {
 		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".x", player.location.x)
 		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".y", player.location.y)
 		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".z", player.location.z)
-		println("Deathpoint for player " + player.name + " set")
 	}
 }
