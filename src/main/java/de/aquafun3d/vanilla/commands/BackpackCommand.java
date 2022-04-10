@@ -19,7 +19,7 @@ public class BackpackCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			Inventory inv = Bukkit.createInventory(null,27, Component.text(ChatColor.DARK_PURPLE + "Backpack"));
 			if(Main.vanillaConfig.contains("backpack." + player.getUniqueId())){
-				for(int i = 0; i < 26;i++){
+				for(int i = 0; i < 27;i++){
 					ItemStack item;
 					if(Main.vanillaConfig.get("backpack." + player.getUniqueId() + "." + i) == null){
 						item = new ItemStack(Material.AIR);

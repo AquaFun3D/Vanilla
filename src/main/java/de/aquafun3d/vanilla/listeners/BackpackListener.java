@@ -21,7 +21,7 @@ public class BackpackListener implements Listener {
 		Player player = (Player) e.getPlayer();
 		if(title.equals(Component.text(ChatColor.DARK_PURPLE + "Backpack"))) {
 			Main.vanillaConfig.set("backpack." + player.getUniqueId(), null);
-			for(int i = 0; i < 26;i++){
+			for(int i = 0; i < 27;i++){
 				ItemStack item = inv.getItem(i);
 				if(item == null){
 					continue;
