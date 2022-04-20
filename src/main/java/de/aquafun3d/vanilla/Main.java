@@ -42,7 +42,6 @@ public class Main extends JavaPlugin{
 	private void listenerRegistration(){
 		PluginManager pluginManager = Bukkit.getPluginManager();
 		pluginManager.registerEvents(new JoinQuitListener(),this);
-		pluginManager.registerEvents(new SleepListener(),this);
 		pluginManager.registerEvents(new DeathListener(),this);
 		pluginManager.registerEvents(new RespawnListener(),this);
 		pluginManager.registerEvents(new BackpackListener(),this);
