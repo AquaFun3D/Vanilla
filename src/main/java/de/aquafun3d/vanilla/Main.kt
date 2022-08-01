@@ -33,7 +33,6 @@ class Main : JavaPlugin() {
 
 	private fun listenerRegistration() {
 		pluginManager.registerEvents(JoinQuitListener(),this)
-		pluginManager.registerEvents(SleepListener(),this)
 		pluginManager.registerEvents(DeathListener(),this)
 		pluginManager.registerEvents(RespawnListener(),this)
 		pluginManager.registerEvents(BackpackListener(),this)
