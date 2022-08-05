@@ -12,9 +12,9 @@ class DeathListener: Listener {
 	@Throws(IOException::class)
 	fun onPlayerDeath(e: PlayerDeathEvent) {
 		val player = e.entity
-		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".world", player.world.name)
-		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".x", player.location.x)
-		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".y", player.location.y)
-		Main.vanillaConfig?.set("deathpoint." + player.uniqueId.toString() + ".z", player.location.z)
+		Main.vanillaConfig?.set("deathpoint.${player.uniqueId}.world", player.world.name)
+		Main.vanillaConfig?.set("deathpoint.${player.uniqueId}.x", player.location.x)
+		Main.vanillaConfig?.set("deathpoint.${player.uniqueId}.y", player.location.y)
+		Main.vanillaConfig?.set("deathpoint.${player.uniqueId}.z", player.location.z)
 	}
 }

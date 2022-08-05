@@ -17,15 +17,15 @@ class BackpackCommand: CommandExecutor {
 	override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
 		if (sender is Player){
 			val player: Player = sender
-			val inv: Inventory = Bukkit.createInventory(null,27, Component.text(ChatColor.DARK_PURPLE.toString() + "Backpack"))
-			if (Main.vanillaConfig?.contains("backpack." + player.uniqueId.toString()) == true) {
+			val inv: Inventory = Bukkit.createInventory(null,27, Component.text("${ChatColor.DARK_PURPLE}Backpack"))
+			if (Main.vanillaConfig?.contains("backpack.${player.uniqueId}") == true) {
 				for (i in 0..26) {
 					var item: ItemStack
-					if (Main.vanillaConfig?.get("backpack." + player.uniqueId.toString() + "." + i) == null) {
+					if (Main.vanillaConfig?.get("backpack.${player.uniqueId}.$i") == null) {
 						item = ItemStack(Material.AIR)
 						inv.setItem(i, item)
 					} else {
-						item = Main.vanillaConfig?.get("backpack." + player.uniqueId.toString() + "." + i) as ItemStack
+						item = Main.vanillaConfig?.get("backpack.${player.uniqueId}.$i") as ItemStack
 						inv.setItem(i, item)
 					}
 				}

@@ -15,12 +15,12 @@ class JoinQuitListener: Listener {
 	@EventHandler
 	fun onJoin(e: PlayerJoinEvent){
 		val player: Player = e.player
-		e.joinMessage(Component.text(Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has joined"))
+		e.joinMessage(Component.text("${Utils.PREFIX}${ChatColor.AQUA}${player.name}${ChatColor.LIGHT_PURPLE} has joined"))
 	}
 
 	@EventHandler
 	fun onLeave(e: PlayerQuitEvent) {
 		val player = e.player
-		e.quitMessage(Component.text(Utils.PREFIX + ChatColor.AQUA.toString() + player.name + ChatColor.LIGHT_PURPLE.toString() + " has left"))
+		e.quitMessage(Component.text("${Utils.PREFIX}${ChatColor.AQUA}${player.name}${ChatColor.LIGHT_PURPLE} has left"))
 	}
 }
